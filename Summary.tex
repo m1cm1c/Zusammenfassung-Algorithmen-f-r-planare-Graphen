@@ -1,0 +1,77 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{lmodern}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{float}
+\usepackage[a4paper, total={6in, 10in}]{geometry}
+\usepackage[colorlinks]{hyperref}
+\usepackage{csquotes}
+\usepackage[acronym,toc]{glossaries}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage[section]{placeins}
+\usepackage{amsmath}
+
+\title{Zusammenfassung Algorithmen für planare Graphen}
+\author{Christoph Michelbach}
+
+
+\makeatletter
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=blue,
+    urlcolor=black,
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    bookmarks=true
+}
+
+\newcommand{\fig}[2]{
+    \begin{figure}[h]
+        \begin{center}
+            \includegraphics[width=#2\textwidth]{Resources/Included Graphics/#1}
+            \caption{#1}
+            \label{fig:#1}
+        \end{center}
+    \end{figure}
+}
+
+\newcommand{\glsquotation}[1]{
+    \paragraph{\gls{#1}:} \glsentrydesc{#1}.
+}
+
+
+\makeglossaries
+
+
+\newglossaryentry{exampleEntry}
+{
+    name=example entry,
+    plural=example entries,
+    description={This is an example glossary entry},
+}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Example Chapter}
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur velit non nibh consectetur posuere. Suspendisse finibus nisl tincidunt sapien ultricies varius. Ut lobortis hendrerit tellus id lobortis. Maecenas non sagittis est. Aenean sed posuere nisi. Donec vel nisl tincidunt, vulputate diam non, semper ex. Proin vitae ullamcorper nisi. In facilisis scelerisque odio ut tincidunt. Suspendisse ac condimentum lacus, et blandit est.\\
+
+Maecenas id sapien quis orci congue vehicula vitae eget ante. Mauris feugiat non nisi in venenatis. Cras quis semper lacus. Sed erat tortor, molestie quis tortor et, lacinia finibus felis. In ut varius lacus. Morbi porta, ante a laoreet finibus, magna lacus malesuada mauris, id commodo nunc magna at dui. Curabitur venenatis ornare accumsan. Praesent facilisis, enim sit amet egestas sodales, nulla ante iaculis urna, placerat venenatis nisi tellus eu nisi. Aliquam eu diam at nibh dapibus dignissim. Quisque at libero lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam in odio sed lorem euismod lobortis id non libero.
+
+
+\glsaddallunused
+\printglossaries
+
+\end{document}
+
