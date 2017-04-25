@@ -15,6 +15,7 @@
 \usepackage{listings}
 \usepackage[section]{placeins}
 \usepackage{amsmath}
+\usepackage{amssymb}
 
 \title{Zusammenfassung Algorithmen für planare Graphen}
 \author{Christoph Michelbach}
@@ -73,6 +74,43 @@ Einen Graphen auf Planarität zu prüfen, ist in $\mathcal{O}(n)$ möglich. Das 
 
 Die Einbettungen von Graphen sind verschieden, gdw. ihre Fasetten verschieden sind.
 \fig{Bsp. fuer untersch. Fasetten: Die Fasette der oberen und der linken unteren Darst. sind gleich, die der rechten unteren aber nicht}{.7}
+
+\paragraph{Jordan-Kurven} sind stetige, sich selbst nicht kreuzende Kurven.\\
+
+
+\section{Dualgraph $G^*$}
+Der Dualgraph zum pl. Graph $G = (V, E)$ mit pl. Einbettung $\mathcal{F}$ ist $G^* = (V^*, E^*)$, wobei für jede Fasette $f \in \mathcal{F}$ ein Knoten $v_f \in V^*$ existiert und für jede Kante $e \in E$ eine Kante $e^* \in E^*$, die die beiden Knoten in $G^*$ verbindet, die zu den beiden Fasetten in $\mathcal{F}$ gehören, an die $e$ angrenzt bzw. den Knoten mit sich selbst verbindet, der zu der Fasette gehört, an die $e$ angrenzt.\\
+
+\begin{itemize}
+    \item $G^*$ ist auch planar.
+    \item $G^*(G^*) = G$ (bzgl. kanonischer pl. Einbettung von $G$ bzw. $G^*$.
+    \item $G^*$ kann Multigraph sein.
+\end{itemize}
+
+Für pl. Graphen $G$ mit bel. pl. Einbettung $\mathcal{F}$ gilt: Ein {\bf Schnitt} (als Kantenmenge) in $G$ entspricht einem {\bf Kreis} in $G^*$.
+
+
+\section{Planare Einbettung}
+Eine planare Einbettung zerlegt $\mathbb{R}^2$ in {\bf Fasetten} (Gebiete, Flächen). Die Fasettenmenge wird mit $\mathcal{F}$ bezeichnet. Die planare Einbettung ist bereits durch ihre Fasettenmenge bzw. die Reihenfolge der Kurven um jede Fläche bzgl. Reihenfolge der Adjazenzlisten der Knoten festgelegt.
+
+
+\section{Kombinatorische Einbettung}
+Die kombinatorische Einbettung steht gegenüber der {\bf geometrischen Einbettung} (mit konkreten Koordinaten der Punkte).
+
+
+\section{Satz von Euler (1750)}
+$G = (V, E)$ ist ein pl. Graph mit bel. pl. Einbettung $\mathcal{F}$. $n \coloneqq |V|$, $m \coloneqq |E|$, $f \coloneqq |\mathcal{F}|$\\
+
+In einem zusammenhängenden, planaren, einfachen (nicht Multigraph), nichtleeren Graphen gilt für jede planare Einbettung: $n - m + f = 2$
+
+
+\chapter{Lemmas}
+\begin{itemize}
+    \item Ein pl. Graph mit mind. 3 Knoten hat höchstens $3n-6$ Kanten.
+    \item Ein maximaler pl. Graph (ein Graph, zu dem man keine Kante hinzufügen kann, ohne Planarität zu verletzen) mit $n$ Knoten, hat die max. Anzahl an Knoten unter allen pl. Graphen mit $n$ Knoten.
+    \item Sei $G$ pl. mit mind. 3 Knoten. $d_{max}(G)$ bezeichne den Maximalgrad in $G$ und $n_j$ bezeichne die Anzahl Knoten in $G$ mit Grad $i$. Dann gilt: \[6 n_0 + 5 n_1 + 4 n_2 + 3 n_3 + 2 n_4 + n_5 \geq n_7 + 2 n_8 + 3 n_9 + ... + (d_{max}(G) - 6) \cdot n_{d_{max}(G)}\]
+\end{itemize}
+
 
 
 
