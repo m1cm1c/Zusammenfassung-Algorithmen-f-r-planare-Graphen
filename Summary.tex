@@ -96,13 +96,24 @@ Eine planare Einbettung zerlegt $\mathbb{R}^2$ in {\bf Fasetten} (Gebiete, Fläc
 
 
 \section{Kombinatorische Einbettung}
-Die kombinatorische Einbettung steht gegenüber der {\bf geometrischen Einbettung} (mit konkreten Koordinaten der Punkte).
+Die kombinatorische Einbettung steht gegenüber der {\bf geometrischen Einbettung} (mit konkreten Koordinaten der Punkte). Die kombinatorische Einbettung wird durch die zyklische Reihenfolge der Kanten um die Knoten ausgezeichnet. Man sagt dann auch, dass 2 Einbettungen das selbe Rotationssystem haben.
 
 
 \section{Satz von Euler (1750)}
 $G = (V, E)$ ist ein pl. Graph mit bel. pl. Einbettung $\mathcal{F}$. $n \coloneqq |V|$, $m \coloneqq |E|$, $f \coloneqq |\mathcal{F}|$\\
 
 In einem zusammenhängenden, planaren, einfachen (nicht Multigraph), nichtleeren Graphen gilt für jede planare Einbettung: $n - m + f = 2$
+
+\section{Minoren}
+Ein ungerichteter Graph $H$ ist ein {\bf Minor} von $G = (V, E)$, gdw. man $H$ aus $G$ erhalten kann, indem man ausschließlich diese Operationen anwendet:
+
+\begin{itemize}
+    \item Knoten löschen.
+    \item Kanten löschen.
+    \item Kanten kontrahieren.
+\end{itemize}
+
+Pl. Graphen sind unter Minorenbildung abgeschlossen.
 
 
 \chapter{Lemmas}
