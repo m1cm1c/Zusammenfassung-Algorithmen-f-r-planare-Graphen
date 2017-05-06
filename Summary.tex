@@ -65,10 +65,6 @@
 \tableofcontents
 
 \chapter{Einführung}
-$K_a$ ist ein vollstd. verbundener Graph aus $a$ Knoten.\\
-
-$K_{a, b}$ ist ein Graph, dessen Knoten aus disjunkten Mengen $M_a$ und $M_b$ der Kardinalitäten $a$ bzw. $b$ bestehen, so dass alle Knoten aus $M_a$ mit allen Knoten aus $M_b$ verbunden sind, es aber keine keine weiteren Verbindungen gibt.\\
-
 Einen Graphen auf Planarität zu prüfen, ist in $\mathcal{O}(n)$ möglich. Das liegt mit daran, dass die Anzahl der Kanten von planaren Graphen in $\mathcal{O}(n)$ liegt.\\
 
 \paragraph{Satz von Koratowski} Ein Graph ist planar, gdw. er weder $K_5$ noch $K_{3, 3}$ als Teilgraphen enthält.\\
@@ -114,6 +110,27 @@ Ein ungerichteter Graph $H$ ist ein {\bf Minor} von $G = (V, E)$, gdw. man $H$ a
 \end{itemize}
 
 Pl. Graphen sind unter Minorenbildung abgeschlossen.
+
+
+\chapter{Vorgabe-Graphen}
+\section{$K$-Graphen}
+\subsection{$K_a$}
+$K_a$ ist ein vollstd. verbundener Graph aus $a$ Knoten.
+
+
+\subsection{$K_{a, b}$}
+$K_{a, b}$ ist ein Graph, dessen Knoten aus disjunkten Mengen $M_a$ und $M_b$ der Kardinalitäten $a$ bzw. $b$ bestehen, so dass alle Knoten aus $M_a$ mit allen Knoten aus $M_b$ verbunden sind, es aber keine keine weiteren Verbindungen gibt.
+
+
+\section{$T$-Graphen}
+\subsection{$T_n$}
+Die Knotenmenge von $T_n$ besteht genau aus den zweielementigen Teilmengen der Menge $\{1, \ldots, n\}$. Zwei Knoten sind genau dann durch eine Kante verbunden, wenn der Schnitt der zugehörigen mengen nicht leer ist.
+
+
+\section{$Q$-Graphen}
+\subsection{$Q_n$}
+$Q_n$ ist ein Würfel. Die Knoten sind Binärzahlen der Länge $n$. Eine Kante verläuft zwischen 2 Knoten gdw. diese sich in genau 1 bit unterscheiden.
+
 
 
 \chapter{Lemmas}
