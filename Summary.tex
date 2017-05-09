@@ -134,7 +134,16 @@ Die Knotenmenge von $T_n$ besteht genau aus den zweielementigen Teilmengen der M
 $Q_n$ ist ein Würfel. Die Knoten sind Binärzahlen der Länge $n$. Eine Kante verläuft zwischen 2 Knoten gdw. diese sich in genau 1 bit unterscheiden.
 
 
+\chapter{Graph-Operationen}
+\paragraph{Hinweis:} Bezüglich weiteren Graph-Operationen, siehe auch Kapitel \ref{ch:DefVonSubgrUntertMinor}.
+
+
+\section{Knotenteilung}
+1 Knoten wird in 2 unterteilt. Die beiden entstandenen Knoten sind dann inzident zu genau den Knoten, zu denen der originale Knoten inzident war. Ob diese Knoten dann verbunden sind, hängt davon ab, was man damit bezweckt.
+
+
 \chapter{Definition von ``Subgraph'', ``Unterteilung'', und ``Minor''}
+\label{ch:DefVonSubgrUntertMinor}
 \section{Subgraph}
 $G' = (V', E')$ heißt Subgraph von $G = (V, E)$, gdw. $V' \subseteq V$ und $E' \subseteq E$.
 
@@ -144,13 +153,15 @@ $G' = (V', E')$ heißt knoteninduzierter Subgraph von $G = (V, E)$, gdw. $V' \su
 
 
 \section{Unterteilung}
-$G' = (V', E')$ heißt Unterteilung von $G = (V, E)$, gdw. $G'$ aus $G$ entsteht, indem Kanten aus $G$ ($e \in E$) durch einfache Wege in $G'$ ersetzt werden. Dabei werden neue Knoten in den Graphen eingefügt. Diese neuen Knoten haben alle Grad 2. [Klären, ob der letzte Satz zutrifft. Blumian hat sich das ausgedacht.]
+$G' = (V', E')$ heißt Unterteilung von $G = (V, E)$, gdw. $G'$ aus $G$ entsteht, indem Kanten aus $G$ ($e \in E$) durch einfache Wege in $G'$ ersetzt werden. Dabei werden neue Knoten in den Graphen eingefügt. Diese neuen Knoten haben alle Grad 2.
 
 
 \section{Topologischer Minor}
 $H$ heißt (topologischer) Minor von $G$, gdw. $G$ eine Unterteilung von $H$ als Subgraph enthält.
 
-Äquivalent dazu: $H$ ist (topologischer) Minor von $G$, gdw. $H$ aus $G$ durch Löschen von Knoten oder Kanten, oder Kontraktion von inzidenten Kanten entsteht, wobei bei der Kontraktion hier nur Knoten mit Grad 2 gelöscht werden dürfen. [Gilt das allg. für Kontraktion? Kann man die Grad-2-Regel nicht durch vorheriges Löschen von Kanten umgehen?]
+In der Vorlesung werden topologische Minoren meist nur ``Minoren'' genannt.
+
+Äquivalent dazu: $H$ ist (topologischer) Minor von $G$, gdw. $H$ aus $G$ durch Löschen von Knoten oder Kanten, oder Kontraktion von inzidenten Kanten entsteht, wobei bei der Kontraktion hier nur Knoten mit Grad 2 gelöscht werden dürfen (man kann aber vorher Kanten entfernen, um den Grad zu reduzieren).
 
 
 \chapter{Arten von Graphen}
@@ -166,9 +177,6 @@ Außerdem gilt:
 \end{itemize}
 
 
-
-
-
 \chapter{Lemmas}
 \begin{itemize}
     \item Ein pl. Graph mit mind. 3 Knoten hat höchstens $3n-6$ Kanten.
@@ -176,6 +184,15 @@ Außerdem gilt:
     \item Sei $G$ pl. mit mind. 3 Knoten. $d_{max}(G)$ bezeichne den Maximalgrad in $G$ und $n_j$ bezeichne die Anzahl Knoten in $G$ mit Grad $i$. Dann gilt: \[6 n_0 + 5 n_1 + 4 n_2 + 3 n_3 + 2 n_4 + n_5 \geq n_7 + 2 n_8 + 3 n_9 + ... + (d_{max}(G) - 6) \cdot n_{d_{max}(G)}\]
     \item Wenn $G$ pl. Gr. und $c$ einfacher Kreis in $G$ ist und keine 2 Knoten auf $c$ in $G - E(c)$ verbunden sind (Weg zwischen beiden existiert), dann besitzt G eine planare Einbettung, bei der $c$ eine Facette begrenzt.
 \end{itemize}
+
+
+\chapter{Graph-Probleme}
+\section{Listenfärbungsproblem}
+\paragraph{Gegeben:} $G = (V, E)$, $k \in \mathbb{N}$
+
+\paragraph{Problem:} Gibt es für jede Zuordnung $S_v, v \in V$ mit $|S_v| = k$ ($S_v$ ist eine Liste von Farben für $v$.) eine korrekte Knotenfärbung, bei der die Farbe eines jeden Knoten $v \in V$ aus seiner Liste $S_v$ stammt?
+
+\paragraph{Motivation:} Frequenzzuweisung in Kommunikationsnetzen.
 
 
 
