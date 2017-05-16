@@ -177,15 +177,6 @@ Außerdem gilt:
 \end{itemize}
 
 
-\chapter{Lemmas}
-\begin{itemize}
-    \item Ein pl. Graph mit mind. 3 Knoten hat höchstens $3n-6$ Kanten.
-    \item Ein maximaler pl. Graph (ein Graph, zu dem man keine Kante hinzufügen kann, ohne Planarität zu verletzen) mit $n$ Knoten, hat die max. Anzahl an Knoten unter allen pl. Graphen mit $n$ Knoten.
-    \item Sei $G$ pl. mit mind. 3 Knoten. $d_{max}(G)$ bezeichne den Maximalgrad in $G$ und $n_j$ bezeichne die Anzahl Knoten in $G$ mit Grad $i$. Dann gilt: \[6 n_0 + 5 n_1 + 4 n_2 + 3 n_3 + 2 n_4 + n_5 \geq n_7 + 2 n_8 + 3 n_9 + ... + (d_{max}(G) - 6) \cdot n_{d_{max}(G)}\]
-    \item Wenn $G$ pl. Gr. und $c$ einfacher Kreis in $G$ ist und keine 2 Knoten auf $c$ in $G - E(c)$ verbunden sind (Weg zwischen beiden existiert), dann besitzt G eine planare Einbettung, bei der $c$ eine Facette begrenzt.
-\end{itemize}
-
-
 \chapter{Graph-Probleme}
 \section{Listenfärbungsproblem}
 \paragraph{Gegeben:} $G = (V, E)$, $k \in \mathbb{N}$
@@ -195,6 +186,13 @@ Außerdem gilt:
 \paragraph{Motivation:} Frequenzzuweisung in Kommunikationsnetzen.
 
 
+\chapter{Lemmas}
+\begin{itemize}
+    \item Ein pl. Graph mit mind. 3 Knoten hat höchstens $3n-6$ Kanten.
+    \item Ein maximaler pl. Graph (ein Graph, zu dem man keine Kante hinzufügen kann, ohne Planarität zu verletzen) mit $n$ Knoten, hat die max. Anzahl an Knoten unter allen pl. Graphen mit $n$ Knoten.
+    \item Sei $G$ pl. mit mind. 3 Knoten. $d_{max}(G)$ bezeichne den Maximalgrad in $G$ und $n_j$ bezeichne die Anzahl Knoten in $G$ mit Grad $i$. Dann gilt: \[6 n_0 + 5 n_1 + 4 n_2 + 3 n_3 + 2 n_4 + n_5 \geq n_7 + 2 n_8 + 3 n_9 + ... + (d_{max}(G) - 6) \cdot n_{d_{max}(G)}\]
+    \item Wenn $G$ pl. Gr. und $c$ einfacher Kreis in $G$ ist und keine 2 Knoten auf $c$ in $G - E(c)$ verbunden sind (Weg zwischen beiden existiert), dann besitzt G eine planare Einbettung, bei der $c$ eine Facette begrenzt.
+\end{itemize}
 
 
 \glsaddallunused
