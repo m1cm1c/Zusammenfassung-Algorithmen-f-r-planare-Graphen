@@ -177,6 +177,27 @@ Außerdem gilt:
 \end{itemize}
 
 
+\chapter{Separatoren in planaren Graphen}
+Sei $G = (V, E)$ zusammenhängend. $S \subseteq V$ heißt Separator von $G$, gdw. der durch $V \setminus S$ induzierte Teilgraph von $G$ nicht zusammenhängend ist.
+
+Knoten $u, v \in V$ werden durch $S$ getrennt, gdw. $u$ und $v$ in verschiedenen Zusammenhangskomponenten des durch $V \setminus S$ ind. Teilgraphen sind.
+
+\paragraph{Interessant:} $|S|$ möglichst klein; und für $V_1, V_2 \subseteq V \setminus S$, $S$ trennt $V_1$ und $V_2$; und $V_1 \cup V_2 \cup S = V$; $V_1$ und $V_2$ möglichst ``balanciert''.
+
+
+\section{Planar Separator Theorem}
+Für $G = (V, E)$ pl. mit $n = |V| \geq 5$ ex. Partitionen $S, V_1, V_2$ von $V$, so dass:
+\begin{itemize}
+    \item $V_1, V_l \leq \frac{2}{3} \cdot n$
+    \item $S$ trennt $V_1$ und $V_2$.
+    \item $|S| \leq 4 \cdot \sqrt{n}$
+\end{itemize}
+
+S kann in Linearzeit ($\in \mathcal{O}(n)$) berechnet werden.
+
+
+
+
 \chapter{Graph-Probleme}
 \section{Listenfärbungsproblem}
 \paragraph{Gegeben:} $G = (V, E)$, $k \in \mathbb{N}$
@@ -186,12 +207,28 @@ Außerdem gilt:
 \paragraph{Motivation:} Frequenzzuweisung in Kommunikationsnetzen.
 
 
+\section{Minimum balanced Separator Problem}
+Gegeben $G = (V, E)$, finde Partitionen $V_1, V_2, S$ von $V$, so dass $S$ Separator, der $V_1$ und $V_2$ trennt, $|S|$ minimal, und $V_1, V_2 \leq \alpha \cdot |V|$ für $\frac{1}{2} \leq \alpha < 1$ konstant.
+
+Dieses Problem ist im Allgmeinen NP-schwer. Ob es bei pl. Gr. für $\alpha = \frac{1}{2}$ NP-schwer ist, ist offen.
+
+
+
 \chapter{Lemmas}
 \begin{itemize}
     \item Ein pl. Graph mit mind. 3 Knoten hat höchstens $3n-6$ Kanten.
     \item Ein maximaler pl. Graph (ein Graph, zu dem man keine Kante hinzufügen kann, ohne Planarität zu verletzen) mit $n$ Knoten, hat die max. Anzahl an Knoten unter allen pl. Graphen mit $n$ Knoten.
     \item Sei $G$ pl. mit mind. 3 Knoten. $d_{max}(G)$ bezeichne den Maximalgrad in $G$ und $n_j$ bezeichne die Anzahl Knoten in $G$ mit Grad $i$. Dann gilt: \[6 n_0 + 5 n_1 + 4 n_2 + 3 n_3 + 2 n_4 + n_5 \geq n_7 + 2 n_8 + 3 n_9 + ... + (d_{max}(G) - 6) \cdot n_{d_{max}(G)}\]
     \item Wenn $G$ pl. Gr. und $c$ einfacher Kreis in $G$ ist und keine 2 Knoten auf $c$ in $G - E(c)$ verbunden sind (Weg zwischen beiden existiert), dann besitzt G eine planare Einbettung, bei der $c$ eine Facette begrenzt.
+    \item Jeder pl. Gr. ist 4-färbbar, aber nicht jeder pl. Gr. ist 3-färbbar.
+    \item Jeder pl. Gr. ist 5-listenfärbbar, aber nicht jeder pl. Gr. ist 4-listenfärbbar.
+    \item Sei $G = (V, E)$ pl. zusammenhängend; $|V| = n \geq 4$; und $T = (V(T), E(T))$ aufgespannter Baum in $G$ der Höhe $h$. Dann ex. Partitionen $S$, $V_1$, $V_2$ von $V$, mit:
+    \begin{itemize}
+        \item $|V_1|, |V_2| \leq \frac{2}{3} \cdot n$
+        \item $S$ Separator, der $V_1$ und $V_2$ trennt
+        \item $|S| \leq 2 \cdot h + 1$
+    \end{itemize}
+    Die Partitionen können in $\mathcal{O}(n)$ berechnet werden.
 \end{itemize}
 
 
