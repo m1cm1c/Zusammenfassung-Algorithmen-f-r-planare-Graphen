@@ -52,11 +52,10 @@
 \makeglossaries
 
 
-\newglossaryentry{exampleEntry}
+\newglossaryentry{geradeMenge}
 {
-    name=example entry,
-    plural=example entries,
-    description={This is an example glossary entry},
+    name=gerade Menge,
+    description={Eine Knotenmenge, in der alle Knoten geraden Grad haben}
 }
 
 
@@ -215,6 +214,25 @@ Das Gewicht eines Matchings ist definiert als: $\text{w}(M) \coloneqq \sum_{e \i
 Gegeben $G = (V, E)$, finde Partitionen $V_1, V_2, S$ von $V$, so dass $S$ Separator, der $V_1$ und $V_2$ trennt, $|S|$ minimal, und $V_1, V_2 \leq \alpha \cdot |V|$ für $\frac{1}{2} \leq \alpha < 1$ konstant.
 
 Dieses Problem ist im Allgmeinen NP-schwer. Ob es bei pl. Gr. für $\alpha = \frac{1}{2}$ NP-schwer ist, ist offen.
+
+
+\section{Mixed-Max Cut Problem}
+Gegeben $G = (V, E)$, $w : E \rightarrow \mathbb{R}$. Finde nichttrivialen Schnitt $S \subset E$ maximalen Gewichts.
+
+Dieses Problem ist i.A. {\bf NP-schwer}.
+
+Der Spezialfall, den wir betrachten, ist, dass $w : E \rightarrow \mathbb{R}^+$. In allgemeinen Graphen funktioniert das in $\mathcal{O}(n \cdot m + n^2 \cdot \log(n))$.
+
+
+\subsection{Algorithmus für Mixed-Max Cut in pl. Gr.}
+\paragraph{Laufzeit:} $\mathcal{O}(n^{\frac{3}{2}} \cdot \log(n))$
+
+\begin{enumerate}
+    \item Trianguliere $G$.
+    \item Berechne Dualgraph $G^* = (V^*, E^*)$ und induzierte Gewichtsfunktion $w^* : E^* \rightarrow \mathbb{R}$.
+    \item Konstruiere zu $G^*$ einen Graphen $G' = (V', E')$, so dass ein perfektes Matching minimalen Gewichts $M$ in $G'$ eine \gls{geradeMenge} maximalen Gewichts $M^*$ in $G^*$ induziert. Berechne $M$ und entspr. Menge $M^*$. Falls $M^* \neq \emptyset$, gib duale Menge zu $M^*$ aus.
+    \item Sonst (d.h. falls $M^* = \emptyset$: Sonderfall. (Siehe Script.)
+\end{enumerate}
 
 
 
