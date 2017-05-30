@@ -58,6 +58,19 @@
     description={Eine Knotenmenge, in der alle Knoten geraden Grad haben}
 }
 
+\newglossaryentry{perfectMatching}
+{
+    name=perfect Matching,
+    description={Ein Matching, bei jeder Knoten des Graphen zu einer Kante des Matchings inzident ist}
+}
+
+\newglossaryentry{nearPerfectMatching}
+{
+    name=near perfect Matching,
+    description={Ein Matching, bei dem maximal 1 Knoten des Graphen nicht zu einer Kante des Matchings inzident ist}
+}
+
+
 
 \begin{document}
 \maketitle
@@ -230,7 +243,7 @@ Der Spezialfall, den wir betrachten, ist, dass $w : E \rightarrow \mathbb{R}^+$.
 \begin{enumerate}
     \item Trianguliere $G$.
     \item Berechne Dualgraph $G^* = (V^*, E^*)$ und induzierte Gewichtsfunktion $w^* : E^* \rightarrow \mathbb{R}$.
-    \item Konstruiere zu $G^*$ einen Graphen $G' = (V', E')$, so dass ein perfektes Matching minimalen Gewichts $M$ in $G'$ eine \gls{geradeMenge} maximalen Gewichts $M^*$ in $G^*$ induziert. Berechne $M$ und entspr. Menge $M^*$. Falls $M^* \neq \emptyset$, gib duale Menge zu $M^*$ aus.
+    \item Konstruiere zu $G^*$ einen Graphen $G' = (V', E')$, so dass ein \glslink{perfectMatching}{perfektes Matching} minimalen Gewichts $M$ in $G'$ eine \gls{geradeMenge} maximalen Gewichts $M^*$ in $G^*$ induziert. Berechne $M$ und entspr. Menge $M^*$. Falls $M^* \neq \emptyset$, gib duale Menge zu $M^*$ aus.
     \item Sonst (d.h. falls $M^* = \emptyset$: Sonderfall. (Siehe Script.)
 \end{enumerate}
 
