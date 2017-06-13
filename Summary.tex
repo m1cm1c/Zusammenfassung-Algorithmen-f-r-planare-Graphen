@@ -228,6 +228,34 @@ Es gilt:
 Ein $st$-Fluss $\phi$ mit $w(\phi) = c(S, V \setminus S)$ ist somit maximal.
 
 
+\chapter{Menger-Problem}
+\fig{Definition von Kappa beim Menger-Problem}{.7}
+
+$\kappa_G(u, v)$ (Definition: Siehe Abbildung \ref{fig:Definition von Kappa beim Menger-Problem}.) heißt Knotenzug von $u$ und $v$.
+
+\fig{Definition von Lambda beim Menger-Problem}{.6}
+
+
+\section{Satz von Menger}
+Für $G = (V, E)$, $s, t \in V$, $s \neq t$, ($\{s, t\} \not \in E$ im Fall i) gilt:
+
+\begin{enumerate}
+    \item $\kappa_G(s, t) \geq \kappa$, gdw. es mind. $\kappa$ intern knotendisjunkte $s$-$t$-Wege gibt.
+    \item $\lambda_G(s, t) \geq \kappa$, gdw. es mind. $\kappa$ kantendisjunkte $s$-$t$-Wege gibt.
+\end{enumerate}
+
+\section{Menger-Problem}
+Gegeben sei ein Graph $G = (V, E)$ und Knoten $s, t \in V$. Finde eine maximale Anzahl paarweise kanten- bzw. intern knotendisjunkter Wege, die $s$ und $t$ verbinden.
+
+
+\section{Kantendisjunkter Menger-Algorithmus}
+\begin{enumerate}
+    \item Ersetze in Linearzeit $G = (V, E)$ durch den gerichteten Graphen $\vec G = (V, \vec E)$, der entsteht, indem jede Kante $\{u, v\} \in E$ ersetzt wird, durch die beiden gerichteten Kanten $(u, v), (v, u) \in \vec E$.
+    \item Berechne in Linearzeit eine Menge geeigneter, einfacher, kantendisjunkter, gerichteter Kreise $\vec C_1, \ldots, \vec C_l$, und betrachte den Graphen $\vec G_C$, der aus $\vec G$ entsteht, indem alle Kanten, die auf einem $\vec C_i$ liegen, umgedreht werden.
+    \item Berechne in Linearzeit eine maximale Anzahl von kantendisjunkten, gerichteten $s$-$t$-Wegen in $\vec G_C$.
+    \item Berechne in Linearzeit aus der Menge der kantendisjunkten $s$-$t$-Wege in $\vec G_C$ eine Menge kantendisjunkter $s$-$t$-Wege in $G$ gleicher Kardinalität.
+\end{enumerate}
+
 
 \chapter{Graph-Probleme}
 \section{Listenfärbungsproblem}
