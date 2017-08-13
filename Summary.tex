@@ -213,6 +213,14 @@ Sei $G = (V, E)$. $M \subseteq E$ heißt {\bf Matching}, gdw. in M keine 2 Kante
 
 Das Gewicht eines Matchings ist definiert als: $\text{w}(M) \coloneqq \sum_{e \in M} \text{w}(e)$
 
+$P$ heißt bzgl. einem Matching $M$ \textbf{alternierender Weg}, gdw. $P$ ein einfacher Weg oder einfacher Kreis ist, und seine Kanten abwechseln in $M$ und $E \setminus M$ liegen.
+
+Ein alternierender Weg $P$ heißt bezüglich $M$ \textbf{erhöhend}, gdw.
+\[
+    M' \coloneqq M \Delta P = (M \cup P) \setminus (M \cap P)
+\]
+ein Matching in $G$ mit $\text{w}(M') > \text{w}(M)$ ist.
+
 
 \chapter{Maximale Flüsse}
 $E(S, V \setminus S)$ ist ein $st$-Schnitt. Diese Notation bedeutet: Alle Kanten, die von $S$ nach $V \setminus S$ führen.
