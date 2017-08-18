@@ -38,11 +38,11 @@ The command takes 2 arguments: The first one is the image's name without file na
 displays the image `Resources/Included Graphics/Intel x86-64 Page Table Hierarchy.png` with the caption "Intel x86-64 Page Table Hierarchy".
 
 ### Referring to Images
-You can refer to images as `fig:[caption]`. The necessary labels are created automatically.
+You can refer to images as `fig:<caption>`. The necessary labels are created automatically.
 
 #### Example
 
-    \ref{Intel x86-64 Page Table Hierarchy}
+    \ref{fig:Intel x86-64 Page Table Hierarchy}
 
 ### Image Formats
 Please preferrably use the PNG format because it offers lossless compression.
