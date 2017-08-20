@@ -334,6 +334,51 @@ Ist die Geradheitsbedingung nicht erfüllt, so ist die Kapizitätsbedingung notw
 \end{itemize}
 
 
+\chapter{Laufzeiten}
+\section{Dualgraph}
+Der Dualgraph kann in $\mathcal{O}(n)$ bestimmt werden.
+
+
+\section{Testen auf Planarität}
+Ist in Zeit $\mathcal{O}(n)$ möglich, es wurde aber kein Algorithmus dafür behandelt.
+
+
+\section{Breiten- und Tiefensuche}
+$\mathcal{O}(n+m)$ für allgemeine Graphen und damit $\mathcal{O}(n)$ für planare Graphen.
+
+
+\section{3-Färbung}
+Sowohl für allgeimene als auch für planare Graphen NP-vollständig.
+
+
+\section{4-Färbung}
+Für allgemeine Graphen NP-vollständig, für planare Graphen funktioniert 4-Färbung immer und es ist polynomiell eine Lösung findbar.
+
+
+\section{5-Listenfärbung}
+Für allgemeine Graphen NP-vollständig, für planare Graphen immer möglich.
+
+
+\section{Finden von Separatoren}
+Ein $\alpha = \frac{2}{3}$-Separator mit maximaler Größe $4 \cdot \sqrt{n}$ kann in $\mathcal{O}(n)$ gefunden werden.
+
+
+\section{Maximales Flussproblem}
+Alle Algorithmen für allgemeine Graphen haben mindestens Laufzeit $\mathcal{O}(n^2)$. Der Algorithmus für st-planare Graphen aus der Vorlesung hat Laufzeit $\mathcal{O}(n \log(n))$, da er Dijkstra verwendet. Es gibt aber auch Algorithmen, die für st-planare Graphen den maximalen Fluss in Zeit $\mathcal{O}(n)$ bestimmen.
+
+
+\section{Mixed Max Cut}
+Für allgemeine Graphen NP-vollständig, für planare Graphen in Zeit $\mathcal{O}(n^{3/2} \log(n))$.
+
+
+\section{Menger-Probleme}
+Für allgeimene Graphen keine Ahnung, für planare Graphen in Zeit $\mathcal{O}(n)$.
+
+
+\section{Problem von Okamura und Seymour}
+NP-vollständig, auch für planare Graphen. Allerdings kommt man unter den Einschränkungen, dass alle $s_i$ und $t_i$ auf der selben Facette liegen, und der Graph unter Hinzufügen der Demand-Kanten immer noch planar ist, auf Laufzeit $\mathcal{O}(n)$.
+
+
 \glsaddallunused
 \printglossaries
 
