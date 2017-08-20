@@ -77,14 +77,23 @@
 \tableofcontents
 
 \chapter{Einführung}
-Einen Graphen auf Planarität zu prüfen, ist in $\mathcal{O}(n)$ möglich. Das liegt mit daran, dass die Anzahl der Kanten von planaren Graphen in $\mathcal{O}(n)$ liegt.\\
+Einen Graphen auf Planarität zu prüfen, ist in $\mathcal{O}(n)$ möglich. Das liegt mit daran, dass die Anzahl der Kanten von planaren Graphen in $\mathcal{O}(n)$ liegt.
 
-\paragraph{Satz von Kuratowski} Ein Graph ist planar, gdw. er weder $K_5$ noch $K_{3, 3}$ als Minor enthält.\\
+\section{Satz von Kuratowski}
+Ein Graph ist planar, gdw. er weder $K_5$ noch $K_{3, 3}$ als Minor enthält.
 
+Die Beweisstrategie geht über diese Schritte, wobei $x, y$ 2 benachbarte Knoten in $G$ sind.
+\begin{enumerate}
+    \item $G - x - y$ enthält keinen $\Theta$-Graphen.
+    \item $G - x - y$ enhält höchstens 1 Knoten mit Grad 1.
+    \item $G - x - y$ ist ein Kreis.
+\end{enumerate}
+
+\section{Einbettungen}
 Die Einbettungen von Graphen sind verschieden, gdw. ihre Facetten verschieden sind.
 \fig{Bsp. fuer untersch. Facetten: Die Facetten der oberen und der linken unteren Darst. sind gleich, die der rechten unteren aber nicht}{.7}
 
-\paragraph{Jordan-Kurven} sind stetige, sich selbst nicht kreuzende Kurven.\\
+\paragraph{Jordan-Kurven} sind stetige, sich selbst nicht kreuzende Kurven.
 
 
 \section{Dualgraph $G^*$}
