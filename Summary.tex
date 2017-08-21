@@ -271,7 +271,7 @@ Gegeben sei ein Graph $G = (V, E)$ und Knoten $s, t \in V$. Finde eine maximale 
 \section{Kantendisjunkter Menger-Algorithmus}
 \begin{enumerate}
     \item Ersetze in Linearzeit $G = (V, E)$ durch den gerichteten Graphen $\vec G = (V, \vec E)$, der entsteht, indem jede Kante $\{u, v\} \in E$ ersetzt wird, durch die beiden gerichteten Kanten $(u, v), (v, u) \in \vec E$.
-    \item Berechne in Linearzeit eine Menge geeigneter, einfacher, kantendisjunkter, gerichteter Kreise $\vec C_1, \ldots, \vec C_l$, und betrachte den Graphen $\vec G_C$, der aus $\vec G$ entsteht, indem alle Kanten, die auf einem $\vec C_i$ liegen, umgedreht werden.
+    \item Berechne in Linearzeit eine Menge geeigneter, einfacher, kantendisjunkter, gerichteter Kreise $\vec C_1, \ldots, \vec C_l$, und betrachte den Graphen $\vec G_C$, der aus $\vec G$ entsteht, indem alle Kanten, die auf einem Rechtskreis liegen, umgedreht werden.
     \item Berechne in Linearzeit eine maximale Anzahl von kantendisjunkten, gerichteten $s$-$t$-Wegen in $\vec G_C$.
     \item Berechne in Linearzeit aus der Menge der kantendisjunkten $s$-$t$-Wege in $\vec G_C$ eine Menge kantendisjunkter $s$-$t$-Wege in $G$ gleicher Kardinalität.
 \end{enumerate}
