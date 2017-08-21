@@ -277,6 +277,13 @@ Gegeben sei ein Graph $G = (V, E)$ und Knoten $s, t \in V$. Finde eine maximale 
 \end{enumerate}
 
 
+\section{Knotendisjunkter Menger-Algorithmus}
+\begin{enumerate}
+    \item Ersetze $G$ durch den Graphen $\vec G$, der entsteht, indem jede Kante aus $G$ durch eine gerichtete Kante in beide Richtungen ersetzt wird, bis auf für Kanten, die zu $s$ oder $t$ adjazent sind. Für Kanten, die zu $s$ adjazent sind, füge nur eine gerichtete Kante, die von $s$ wegführt, hinzu, und für Kanten, die zu $t$ adjazent sind, nur eine gerichtete Kante, die zu $t$ hinführt.
+    \item Für die aus $s$ herauslaufenden Kanten, führe eine Right-First-Suche durch. Löse dabei Konflikte aufeinandertreffender Wege auf, indem ein Backtrack-Remove-Schritt ausgeführt wird, wenn der aktuelle Suchweg von links auf einen bereits besetzten Knoten trifft, und eine Umorganisation, wenn der aktuelle Suchweg von rechts auf einen bereits besetzten Knoten trifft. Bei der Umorganisation konkateniert man den bisherigen Suchweg mit dem weiteren Weg des Pfades, auf den man getroffen ist, und wechselt dann den Suchweg auf den bisherigen Weg dieses Pfades. Damit trifft man gerade von links auf einen anderen Pfad und führt deswegen einen Backtrack-Remove-Schritt aus.
+\end{enumerate}
+
+
 \chapter{Graph-Probleme}
 \section{Listenfärbungsproblem}
 \paragraph{Gegeben:} $G = (V, E)$, $k \in \mathbb{N}$
